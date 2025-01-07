@@ -560,7 +560,7 @@
                 <control type="label">
                     <left>240</left>
                     <top>20</top>
-                    <label>[COLOR dialog_fg_90]$VAR[AudioCodecVar] $VAR[AudioChannelsVar][/COLOR] [COLOR dialog_fg_70]$INFO[Player.Process(audio.is.dolby.atmos),(,)]$INFO[Player.Process(audio.dts.x.type),(,)][/COLOR]</label>
+                    <label>[COLOR dialog_fg_90]$VAR[AudioCodecVar] $VAR[AudioChannelsVar][/COLOR] [COLOR dialog_fg_70]$VAR[AudioCodecSpatialVar][/COLOR]</label>
                     <font>font_tiny</font>
                 </control>
 				

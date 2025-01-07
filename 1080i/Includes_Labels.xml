@@ -530,7 +530,7 @@
     <variable name="LabelAudioCodecs">
         <value condition="String.IsEqual(ListItem.AudioCodec,aac)">AAC</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,aac_latm)">AAC</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,ac3)">DD</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,ac3)">Dolby Digital</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,aif)">AIFF</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,aifc)">AIFF</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,aiff)">AIFF</value>
@@ -540,10 +540,13 @@
         <value condition="String.IsEqual(ListItem.AudioCodec,cdda)">CDDA</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dca)">DTS</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dolbydigital)">DD</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd)">DTS-HD</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma)">DTS-HD MA</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,dtsma)">DTS-HD MA</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
-        <value condition="String.IsEqual(ListItem.AudioCodec,eac3)">DDP</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x)">DTS:X MA</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,dtshd_ma_x_imax)">DTS:X (IMAX)</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,eac3)">DD+</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos)">DD+ (Atmos)</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,flac)">FLAC</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,mp1)">MP1</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,mp2)">MP2</value>
@@ -556,6 +559,7 @@
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s16le)">PCM</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s24le)">PCM</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,truehd)">TrueHD</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos)">TrueHD (Atmos)</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,vorbis)">Vorbis</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,wav)">WAV</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,wavpack)">WAVP</value>
@@ -2067,6 +2071,12 @@
         <value condition="Integer.IsEqual(Player.Process(amlogic.vs10.mode.raw),1)">DV Tunnel</value>
     </variable>
 	
+    <variable name="AudioCodecSpatialVar">
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">(IMAX)</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">(Atmos)</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">(Atmos)</value>
+    </variable>
+	
     <variable name="AudioCodecVar">
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac)">AAC</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,aac_latm)">AAC</value>
@@ -2080,10 +2090,13 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,cdda)">CDDA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dca)">DTS</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dolbydigital)">Dolby Digital</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd)">DTS-HD</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma)">DTS-HD MA</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtsma)">DTS-HD MA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X MA</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">DTS:X</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">Dolby Digital Plus</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">Dolby Digital Plus</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,flac)">FLAC</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp1)">MP1</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp2)">MP2</value>
@@ -2096,6 +2109,7 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_s16le)">PCM</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_s24le)">PCM</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd)">Dolby TrueHD</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">Dolby TrueHD</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,vorbis)">Vorbis</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,wav)">WAV</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,wavpack)">WAVP</value>
@@ -2117,10 +2131,13 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,cdda)">CDDA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dca)">DTS</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dolbydigital)">Dolby Digital</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd)">DTS-HD</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma)">DTS-HD MA</value>
-        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtsma)">DTS-HD MA</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_hra)">DTS-HD HRA</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x)">DTS:X MA</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,dtshd_ma_x_imax)">DTS:X (IMAX)</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3)">DD+</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)">DD+ (Atmos)</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,flac)">FLAC</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp1)">MP1</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,mp2)">MP2</value>
@@ -2133,6 +2150,7 @@
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_s16le)">PCM</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,pcm_s24le)">PCM</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd)">Dolby TrueHD</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)">TrueHD (Atmos)</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,vorbis)">Vorbis</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,wav)">WAV</value>
         <value condition="String.IsEqual(VideoPlayer.AudioCodec,wavpack)">WAVP</value>
