@@ -2920,3 +2920,7 @@ msgstr "Original"
 msgctxt "#32065"
 msgid "VS10 mode"
 msgstr "VS10-Modus"
+
+msgctxt "#32067"
+msgid "L5 Active Offsets"
+msgstr "L5 Aktive Offsets"
